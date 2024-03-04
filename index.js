@@ -5,11 +5,14 @@ const startButton = document.getElementById('start');
 startButton.addEventListener('click', function () {
 
 	timerId = setInterval(updateClock, 100);
+	startButton.disabled = true;
+
 });
 
 const stopButton = document.getElementById('stop');
 stopButton.addEventListener('click', function () {
 	clearInterval(timerId);
+	startButton.disabled = false;
 });
 
 
